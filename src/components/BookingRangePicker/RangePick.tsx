@@ -47,12 +47,6 @@ const RangePick = () => {
         calculateRange(startDate, date.toISOString())
     }
 
-    const onChange = (dates: any) => {
-        const [firstItem, _] = dates;
-        // setStartDate(firstItem);
-        // setEndDate(moment(firstItem).add(7, 'days').toDate())
-    };
-
     const handleRangeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedRangeOption(e.target.value as RangeOption);
     }
@@ -116,7 +110,6 @@ const RangePick = () => {
                     startDate={new Date(startDate!)}
                     endDate={new Date(endDate!)}
                     inline
-                    onChange={onChange}
                 />}
                 <br />
                 <button style={{ marginTop: "10px" }} onClick={applyNewRange}>Apply</button>

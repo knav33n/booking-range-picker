@@ -21,6 +21,7 @@ const MonthsPick = () => {
           minDate={today}
           selected={startDate}
           startDate={startDate}
+          endDate={endDate}
           showMonthYearPicker
           inline
           onChange={onChange}
